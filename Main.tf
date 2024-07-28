@@ -9,7 +9,7 @@ terraform {
 
 provider "azurerm" {
   features {}
-  
+
 }
 
 resource "azurerm_resource_group" "demo" {
@@ -83,8 +83,8 @@ resource "azurerm_windows_virtual_machine" "vm1" {
   network_interface_ids = [azurerm_network_interface.NIC.id]
 
   os_disk {
-    name              = "myosdisk"
-    caching           = "ReadWrite"
+    name                 = "myosdisk"
+    caching              = "ReadWrite"
     storage_account_type = "Standard_LRS"
   }
 
